@@ -1,5 +1,5 @@
 import { useMutation } from "@tanstack/react-query";
-import { api } from "@shared/routes";
+import { api } from "@/lib/types";
 import { z } from "zod";
 
 export function useCreateSubscriber() {

@@ -1,4 +1,4 @@
-import { Post } from "@shared/schema";
+import { Post } from "@/lib/types";
 import { Link } from "wouter";
 import { Clock, ArrowRight } from "lucide-react";
 import { DifficultyBadge } from "./DifficultyBadge";
@@ -15,7 +15,7 @@ export function BlogCard({ post }: BlogCardProps) {
     <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 border-border/50 hover:shadow-xl hover:border-primary/20 hover:-translate-y-1 group bg-card">
       {/* Optional Cover Image Area - could be added if schema supports it, strictly following schema now though */}
       <div className="h-2 w-full bg-gradient-to-r from-primary to-accent opacity-70 group-hover:opacity-100 transition-opacity" />
-      
+
       <CardHeader className="pb-3 pt-6 px-6">
         <div className="flex justify-between items-start mb-3">
           <TopicTag topic={post.topic} />
@@ -39,7 +39,7 @@ export function BlogCard({ post }: BlogCardProps) {
           <Clock className="w-4 h-4 mr-1.5" />
           <span>{post.readTime} min read</span>
         </div>
-        
+
         <Link href={`/blog/${post.slug}`}>
           <Button variant="ghost" size="sm" className="group/btn pl-0 hover:bg-transparent hover:text-primary">
             Read Article
